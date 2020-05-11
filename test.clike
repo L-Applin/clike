@@ -1,0 +1,22 @@
+// a dummy file for testing parsing
+  fn main : (int, [string]) -> float32 
+(arg_count, args) -> {    // optional : (arg_count: int, args: [string]
+  i: u16;
+  for(i=0; i<args.length; i++) {
+    println("args in original: %d %s", i, args[i]);
+    println("""args"" in ""copy"": %d ""%s""", i, cpt_ars[i]);
+    println("");
+  }
+  if(false){
+
+  }
+  while     ( true        )     
+    ;
+  a, b, c, d: int;
+  a <<< 2;
+  b = 42;
+  c = -42 * 10^(a +b)
+  d=9.056 -10.0;
+  e:=-42;
+  
+}
