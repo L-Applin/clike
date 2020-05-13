@@ -75,6 +75,7 @@ unsigned int NUMBER_FLAG_IS_BINARY          = 0x0010;
 unsigned int NUMBER_FLAG_IS_NEGATIVE        = 0x0020;
 unsigned int NUMBER_FLAG_HAS_A_DOT          = 0x0040;
 
+unsigned int PRIMITIVE_NONE                 = 0;
 unsigned int PRIMITIVE_U8                   = 0x0001;
 unsigned int PRIMITIVE_U16                  = 0x0002;
 unsigned int PRIMITIVE_U32                  = 0x0004;
@@ -128,6 +129,14 @@ struct Lexer_Token {
     s += std::to_string(position);
     return s;
   }
+
+  void copy_name(char* dest) {
+    unsigned int i = 0;
+    for (i = 0; i < length; i++) {
+      dest[i] = text[i]; 
+    }
+    dest[i+1] = '\0';
+  }
 };
 
 
@@ -180,5 +189,3 @@ class Lexer {
       return buffer[pos+1];
     }
 };
-
-

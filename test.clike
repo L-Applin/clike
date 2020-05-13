@@ -1,5 +1,5 @@
 // a dummy file for testing parsing
-  fn main : (int, [string]) -> float32 
+fn main : (int, [string]) -> float32 
 (arg_count, args) -> {    // optional : (arg_count: int, args: [string]
   i: u16;
   for(i=0; i<args.length; i++) {
@@ -18,5 +18,10 @@
   c = -42 * 10^(a +b)
   d=9.056 -10.0;
   e:=-42;
+
+  double: int -> int = x -> x*x
   
+  g := double(e);
 }
+
+
